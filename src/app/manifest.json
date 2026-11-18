@@ -1,0 +1,21 @@
+{
+  "name": "eslintconfig.dev",
+  "short_name": "eslintconfig.dev",
+  "description": "Build an ESLint flat config for ESLint 9 and 10 in your browser.",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#17181c",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

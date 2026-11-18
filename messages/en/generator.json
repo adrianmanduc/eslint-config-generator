@@ -1,0 +1,378 @@
+{
+  "hero": {
+    "title": "Build your ESLint flat config",
+    "description": "Pick a stack, add plugins, tune the rules and copy a ready-to-use eslint.config.mjs. Free, open source, and everything runs in your browser."
+  },
+  "header": {
+    "github": "View on GitHub"
+  },
+  "loading": "Loading the generator",
+  "mobileView": {
+    "label": "View",
+    "configure": "Configure",
+    "output": "Your config"
+  },
+  "toolbar": {
+    "eslintVersion": "ESLint version",
+    "eslintMajor": "ESLint {major}",
+    "presets": "Start from a preset",
+    "confirmTitle": "Replace your configuration?",
+    "confirmDescription": "Applying the {name} preset replaces your current plugins, shared configs and rule changes.",
+    "confirm": "Apply preset",
+    "cancel": "Keep editing",
+    "startOver": "Start over",
+    "startOverHint": "Remove every plugin and rule change, keeping only ESLint core.",
+    "resetTitle": "Start from scratch?",
+    "resetDescription": "This removes every plugin, shared config and rule change, and clears the globals and ignored paths. ESLint core with its recommended rules stays.",
+    "resetConfirm": "Start over"
+  },
+  "sidebar": {
+    "label": "Plugins",
+    "plugins": "Plugins in use",
+    "hint": "Select a plugin to choose its shared configs and tune its rules.",
+    "addPlugin": "Add plugin",
+    "remove": "Remove {name}",
+    "noConfig": "No shared config",
+    "customized": "{count, plural, one {# rule changed} other {# rules changed}}",
+    "incompatible": "Does not declare support for ESLint {major}"
+  },
+  "project": {
+    "globals": {
+      "title": "Globals",
+      "description": "Where your code runs. Without them, no-undef reports names such as window or process.",
+      "browser": "Browser",
+      "browserHint": "window, document, fetch",
+      "node": "Node.js",
+      "nodeHint": "process, Buffer, __dirname"
+    },
+    "ignores": {
+      "title": "Ignored paths",
+      "description": "Glob patterns ESLint skips, one per line. node_modules and .git are always ignored.",
+      "toggle": "Ignored paths ({count})"
+    }
+  },
+  "plugin": {
+    "docs": "Documentation",
+    "remove": "Remove plugin",
+    "version": "Rules from v{version}",
+    "ruleCount": "{count, plural, one {# rule} other {# rules}}",
+    "configs": {
+      "title": "Shared configs",
+      "description": "Rule sets maintained by the plugin. Start here, then adjust individual rules below.",
+      "none": "This plugin ships no shared configs. Turn on its rules below.",
+      "typeChecked": "Needs type information",
+      "ruleCount": "{count, plural, one {# rule} other {# rules}}"
+    },
+    "options": {
+      "title": "Options",
+      "factory": "Shortcuts for the {config} config. Changing one swaps it for a customized version.",
+      "settings": "Written to the plugin settings."
+    },
+    "compatibility": {
+      "title": "No declared support for ESLint {major}",
+      "description": "{name} {version} declares ESLint {range} as its peer dependency, so it may not load on ESLint {major}. Check the plugin's releases for a compatible version, or switch ESLint version."
+    },
+    "scoped": "Only applies to files matching"
+  },
+  "rules": {
+    "title": "Rules",
+    "search": "Search rules",
+    "clearSearch": "Clear search",
+    "filter": "Filter rules",
+    "filters": {
+      "all": "All",
+      "active": "Active",
+      "customized": "Changed"
+    },
+    "showDeprecated": "Show deprecated",
+    "count": "{shown} of {total}",
+    "empty": "No rules match.",
+    "error": "The rule list could not be loaded.",
+    "retry": "Try again",
+    "resetAll": "Reset changes",
+    "severity": {
+      "label": "Severity of {rule}",
+      "off": "Off",
+      "warn": "Warn",
+      "error": "Error"
+    },
+    "source": {
+      "config": "Set by {config}",
+      "customized": "Changed by you"
+    },
+    "reset": "Reset {rule}",
+    "badges": {
+      "fixable": "Fixable",
+      "fixableHint": "Problems can be fixed automatically with --fix.",
+      "typed": "Typed",
+      "typedHint": "Needs type information. Enabling it adds the type-aware setup to the config.",
+      "deprecated": "Deprecated"
+    },
+    "options": {
+      "toggle": "Options",
+      "label": "Options for {rule}",
+      "hint": "A JSON array of the values that follow the severity, for example [\"always\", '{' \"allow\": [] '}'].",
+      "invalid": "Enter a valid JSON array.",
+      "docs": "See the rule documentation for the available options."
+    }
+  },
+  "output": {
+    "title": "Your config",
+    "configTab": "Config file",
+    "installTab": "Install",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copyFailed": "Copy failed",
+    "download": "Download",
+    "installTitle": "1. Install the packages",
+    "installHint": "Run this in your project root.",
+    "saveTitle": "2. Save the config",
+    "saveHint": "Download {fileName} from the Config file view, or copy it into your project root, then run your linter.",
+    "typeAware": "This config uses type-aware rules. They need a tsconfig.json that includes the files you lint.",
+    "warningsTitle": "{count, plural, one {# plugin does} other {# plugins do}} not declare support for ESLint {major}",
+    "warningsDescription": "{names}. They may fail to load or print peer dependency warnings.",
+    "packageManager": "Package manager",
+    "viewLabel": "Show",
+    "share": "Share",
+    "shareCopied": "Link copied",
+    "shareHint": "Copy a link that opens this exact config",
+    "configFormat": "Config file format",
+    "configFormats": {
+      "mjs": "JavaScript module: works everywhere",
+      "ts": "TypeScript: needs jiti, which the install command adds"
+    }
+  },
+  "plugins": {
+    "categories": {
+      "core": "Core",
+      "language": "Languages",
+      "quality": "Code quality",
+      "framework": "Frameworks",
+      "backend": "Backend",
+      "testing": "Testing",
+      "imports": "Imports and sorting",
+      "style": "Style"
+    },
+    "descriptions": {
+      "core": "The rules built into ESLint: likely bugs, best practices and language features.",
+      "typescript": "TypeScript parsing plus rules that understand types.",
+      "stylistic": "Formatting rules: indentation, quotes, semicolons, spacing and more.",
+      "react": "React and JSX best practices.",
+      "react-hooks": "The Rules of Hooks and React Compiler checks.",
+      "jsx-a11y": "Accessibility checks for JSX elements.",
+      "next": "Next.js checks for images, scripts, fonts and Core Web Vitals.",
+      "tailwindcss": "Tailwind CSS class ordering, shorthands and conflicting classes.",
+      "simple-import-sort": "Automatic, zero-config sorting of imports and exports.",
+      "import-x": "Validates imports and exports: unresolved paths, duplicates, cycles and ordering.",
+      "perfectionist": "Sorts objects, imports, types, JSX props and more.",
+      "node": "Node.js checks: deprecated APIs, unsupported features and missing imports.",
+      "nestjs": "NestJS checks for dependency injection, Swagger decorators and validation.",
+      "unicorn": "Hundreds of opinionated rules for modern, consistent JavaScript. Requires ESLint 10.",
+      "react-refresh": "Checks that components can be safely updated by Fast Refresh.",
+      "tanstack-query": "Catches common TanStack Query mistakes, such as incomplete query keys.",
+      "vitest": "Vitest checks: focused or skipped tests, missing assertions and more.",
+      "jest": "Jest checks: focused or skipped tests, missing assertions and more."
+    }
+  },
+  "presets": {
+    "items": {
+      "javascript": {
+        "name": "JavaScript",
+        "description": "ESLint recommended rules with Stylistic formatting."
+      },
+      "typescript": {
+        "name": "TypeScript",
+        "description": "typescript-eslint, sorted imports, Vitest and Stylistic formatting."
+      },
+      "react": {
+        "name": "React",
+        "description": "React with TypeScript, Hooks, Fast Refresh, accessibility and Vitest rules, as in a Vite app."
+      },
+      "next": {
+        "name": "Next.js",
+        "description": "Next.js Core Web Vitals with React, TypeScript, accessibility and Vitest rules."
+      },
+      "next-tailwind": {
+        "name": "Next.js + Tailwind",
+        "description": "The Next.js preset plus Tailwind CSS class linting."
+      },
+      "express": {
+        "name": "Express",
+        "description": "A Node.js backend with TypeScript and Node.js rules."
+      },
+      "nestjs": {
+        "name": "NestJS",
+        "description": "Type-aware TypeScript rules with NestJS and Jest checks."
+      }
+    },
+    "pages": {
+      "javascript": {
+        "title": "ESLint Config for JavaScript",
+        "heading": "ESLint config for JavaScript",
+        "description": "A ready-to-use eslint.config.mjs for plain JavaScript: ESLint's recommended rules and Stylistic formatting, for ESLint 9 and 10. Tune any rule, then copy the file."
+      },
+      "typescript": {
+        "title": "ESLint Config for TypeScript",
+        "heading": "ESLint config for TypeScript",
+        "description": "A ready-to-use eslint.config.mjs for TypeScript: typescript-eslint, sorted imports, Vitest and Stylistic, for ESLint 9 and 10. Turn on type-aware rules in one click."
+      },
+      "react": {
+        "title": "ESLint Config for React",
+        "heading": "ESLint config for React",
+        "description": "A ready-to-use eslint.config.mjs for React with TypeScript: Hooks, Fast Refresh, jsx-a11y and Vitest rules, as in a Vite app, for ESLint 9 and 10."
+      },
+      "next": {
+        "title": "ESLint Config for Next.js",
+        "heading": "ESLint config for Next.js",
+        "description": "A ready-to-use eslint.config.mjs for Next.js: Core Web Vitals, React, Hooks, accessibility, typescript-eslint and Vitest rules, for ESLint 9 and 10."
+      },
+      "next-tailwind": {
+        "title": "ESLint Config for Next.js and Tailwind CSS",
+        "heading": "ESLint config for Next.js and Tailwind CSS",
+        "description": "A ready-to-use eslint.config.mjs for Next.js with Tailwind CSS: Core Web Vitals, React, accessibility and Tailwind class linting, for ESLint 9 and 10."
+      },
+      "express": {
+        "title": "ESLint Config for Express and Node.js",
+        "heading": "ESLint config for Express and Node.js",
+        "description": "A ready-to-use eslint.config.mjs for an Express or Node.js backend: typescript-eslint, Node.js rules and sorted imports, for ESLint 9 and 10."
+      },
+      "nestjs": {
+        "title": "ESLint Config for NestJS",
+        "heading": "ESLint config for NestJS",
+        "description": "A ready-to-use eslint.config.mjs for NestJS: type-aware typescript-eslint, NestJS checks and Jest rules, matching the official starter, for ESLint 9 and 10."
+      }
+    },
+    "includes": "Includes",
+    "start": {
+      "confirmTitle": "Start from the {name} preset?",
+      "confirmDescription": "This page starts from the {name} preset, which replaces your current setup in this browser. Share or download your own config first if you want to keep it.",
+      "confirm": "Use {name} preset",
+      "cancel": "Keep mine"
+    }
+  },
+  "addPlugin": {
+    "title": "Add a plugin",
+    "description": "Plugins add rules for a language, framework or tool. Add as many as you need; each one is installed as its own package.",
+    "search": "Search plugins",
+    "clearSearch": "Clear search",
+    "empty": "No plugins match.",
+    "add": "Add",
+    "addLabel": "Add {name}",
+    "added": "Added",
+    "ruleCount": "{count, plural, one {# rule} other {# rules}}",
+    "incompatible": "No ESLint {major} support",
+    "done": "Done"
+  },
+  "tour": {
+    "restart": "How to use",
+    "progress": "Step {current} of {total}",
+    "next": "Next",
+    "back": "Back",
+    "done": "Got it",
+    "skip": "Skip",
+    "steps": {
+      "welcome": {
+        "title": "Build an ESLint config in a minute",
+        "body": "This tool writes a ready-to-use eslint.config.mjs for you. Everything happens in your browser and is saved there, so you can come back to it. Here is a quick look at the four parts."
+      },
+      "setup": {
+        "title": "1. Start from your stack",
+        "body": "Choose your ESLint version, then pick a preset that matches your project. A preset fills in the plugins and sensible defaults. You can also set global variables and ignored paths here, or start over from a blank config."
+      },
+      "plugins": {
+        "title": "2. Choose your plugins",
+        "body": "These are the plugins in your config. Select one to edit it, remove it with the cross, or use Add plugin to browse everything available with a description of what each one checks."
+      },
+      "rules": {
+        "title": "3. Tune the rules",
+        "body": "Tick a plugin's shared configs to turn on its recommended rules. Then set any individual rule to Off, Warn or Error, and open Options where a rule has them. Use the Changed filter to see only what you altered."
+      },
+      "output": {
+        "title": "4. Take your config",
+        "body": "Your config updates as you go. Copy, download or share a link to it from the Config file view, and switch to Install for the command that adds the packages it needs."
+      }
+    }
+  },
+  "share": {
+    "loaded": "Shared config loaded",
+    "invalidTitle": "This link could not be opened",
+    "invalidDescription": "The shared config is incomplete or from an incompatible version. Your own setup is unchanged.",
+    "confirmTitle": "Open the shared config?",
+    "confirmDescription": "It replaces your current setup in this browser. Share or download your own config first if you want to keep it.",
+    "confirm": "Open shared config",
+    "cancel": "Keep mine"
+  },
+  "about": {
+    "howTitle": "How it works",
+    "steps": {
+      "stack": {
+        "title": "Pick your stack",
+        "body": "Start from a preset for JavaScript, TypeScript, React, Next.js, Next.js with Tailwind CSS, Express or NestJS, and choose ESLint 9 or ESLint 10."
+      },
+      "tune": {
+        "title": "Add plugins and tune the rules",
+        "body": "Add plugins from the catalog and switch their shared configs on or off. Set any rule to off, warn or error and edit its options; each rule shows what your configs already set."
+      },
+      "ship": {
+        "title": "Copy, install and lint",
+        "body": "Copy or download <code>eslint.config.mjs</code>, run the install command for npm, pnpm, yarn or bun, then run <code>npx eslint .</code> in your project."
+      }
+    },
+    "pluginsTitle": "Supported ESLint plugins",
+    "pluginsDescription": "Each plugin's rule list is read from its published package, so rule names, recommended settings and deprecations match the version you install.",
+    "faqTitle": "Frequently asked questions",
+    "faq": {
+      "flatConfig": {
+        "question": "What is an ESLint flat config?",
+        "answer": "It is the configuration format ESLint uses from version 9: one <code>eslint.config.js</code> (or <code>.mjs</code>, <code>.ts</code>) file that exports an array of config objects. It replaces <code>.eslintrc</code> files, and plugins are imported as ordinary JavaScript modules instead of being resolved by name."
+      },
+      "migrate": {
+        "question": "How do I migrate from .eslintrc to a flat config?",
+        "answer": "Paste your .eslintrc.json into Import .eslintrc above the editor: it maps extends, plugins, environments and rules onto the generator and lists anything it could not carry over. ESLint's own <code>npx @eslint/migrate-config .eslintrc.json</code> is the alternative for a mechanical conversion."
+      },
+      "version": {
+        "question": "Should I use ESLint 9 or ESLint 10?",
+        "answer": "Both use flat config. ESLint 10 removes the old eslintrc format entirely, and some plugins have not declared support for it yet. The generator checks which ESLint versions each plugin supports and warns you before you install one that does not."
+      },
+      "typescript": {
+        "question": "Does it support TypeScript and type-aware rules?",
+        "answer": "Yes. When you enable a typescript-eslint config that needs type information, the output adds the <code>projectService</code> parser setup and turns type-aware rules off for plain JavaScript files."
+      },
+      "next": {
+        "question": "Can I use it for Next.js and Tailwind CSS?",
+        "answer": "Yes. The Next.js + Tailwind preset combines the Next.js, React, React Hooks, jsx-a11y and Tailwind CSS plugins with typescript-eslint, import sorting, Vitest and Stylistic. Remove any of them or add more from the catalog."
+      },
+      "privacy": {
+        "question": "Is my configuration stored anywhere?",
+        "answer": "Only in your own browser's local storage. There is no account, server or database. A share link carries the config after the # in the URL, a part browsers never send to a server."
+      },
+      "free": {
+        "question": "Is it free?",
+        "answer": "Yes. It is free to use, and the source code is on <link>GitHub</link> under the MIT license."
+      }
+    },
+    "stacksTitle": "ESLint configs by stack",
+    "faqDescription": "Short answers about flat config, migrating and how the generator works. Something missing? <link>Open an issue on GitHub</link>."
+  },
+  "import": {
+    "open": "Import .eslintrc",
+    "openHint": "Turn an existing .eslintrc into a flat config",
+    "title": "Import an .eslintrc",
+    "description": "Paste a legacy .eslintrc.json (comments allowed) or a package.json with an eslintConfig field. Extends, plugins, environments, ignore patterns and rules are carried over.",
+    "inputLabel": ".eslintrc contents",
+    "placeholder": "Paste your .eslintrc.json here",
+    "replaceNote": "Importing replaces your current setup in this browser. JavaScript and YAML configs are not supported: convert them to JSON first.",
+    "submit": "Import",
+    "cancel": "Cancel",
+    "done": "Done",
+    "doneTitle": "Config imported",
+    "doneDescription": "{plugins, plural, =0 {No plugins} one {# plugin} other {# plugins}} and {rules, plural, =0 {no rules} one {# rule} other {# rules}} imported. {names}",
+    "skippedTitle": "Not imported",
+    "skippedDescription": "These have no match in the generator, or the installed plugin no longer has them. Add them to the generated file by hand if you still need them:",
+    "overrides": "{count, plural, one {# override block was left out: add it as an extra config object with its own files.} other {# override blocks were left out: add them as extra config objects with their own files.}}",
+    "errors": {
+      "parse": "This is not valid JSON. Paste the contents of a .eslintrc.json, or convert a .js or .yml config to JSON first.",
+      "notConfig": "No ESLint settings found. The JSON needs extends, plugins, rules, env or overrides, at the top level or under eslintConfig."
+    }
+  }
+}

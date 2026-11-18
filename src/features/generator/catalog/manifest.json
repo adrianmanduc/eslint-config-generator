@@ -1,0 +1,92 @@
+{
+  "core": {
+    "version": "10.0.1",
+    "eslintPeerRange": null,
+    "ruleCount": 292
+  },
+  "import-x": {
+    "version": "4.18.1",
+    "eslintPeerRange": "^8.57.0 || ^9.0.0 || ^10.0.0",
+    "ruleCount": 51
+  },
+  "jest": {
+    "version": "29.17.1",
+    "eslintPeerRange": "^8.57.0 || ^9.0.0 || ^10.0.0",
+    "ruleCount": 71
+  },
+  "jsx-a11y": {
+    "version": "6.10.2",
+    "eslintPeerRange": "^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9",
+    "ruleCount": 39
+  },
+  "nestjs": {
+    "version": "7.5.8",
+    "eslintPeerRange": ">=9.18.0",
+    "ruleCount": 25
+  },
+  "next": {
+    "version": "16.4.6",
+    "eslintPeerRange": null,
+    "ruleCount": 22
+  },
+  "node": {
+    "version": "18.5.0",
+    "eslintPeerRange": ">=8.57.1",
+    "ruleCount": 45
+  },
+  "perfectionist": {
+    "version": "5.14.0",
+    "eslintPeerRange": "^8.45.0 || ^9.0.0 || ^10.0.0",
+    "ruleCount": 24
+  },
+  "react": {
+    "version": "7.37.5",
+    "eslintPeerRange": "^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7",
+    "ruleCount": 103
+  },
+  "react-hooks": {
+    "version": "7.1.1",
+    "eslintPeerRange": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0 || ^10.0.0",
+    "ruleCount": 29
+  },
+  "react-refresh": {
+    "version": "0.5.8",
+    "eslintPeerRange": "^9 || ^10",
+    "ruleCount": 1
+  },
+  "simple-import-sort": {
+    "version": "14.0.0",
+    "eslintPeerRange": ">=5.0.0",
+    "ruleCount": 2
+  },
+  "stylistic": {
+    "version": "6.0.1",
+    "eslintPeerRange": "^9.0.0 || ^10.0.0",
+    "ruleCount": 96
+  },
+  "tailwindcss": {
+    "version": "4.4.0",
+    "eslintPeerRange": "^9.0.0 || ^10.0.0",
+    "ruleCount": 9
+  },
+  "tanstack-query": {
+    "version": "5.107.1",
+    "eslintPeerRange": "^8.57.0 || ^9.0.0 || ^10.0.0",
+    "ruleCount": 8
+  },
+  "typescript": {
+    "version": "8.73.0",
+    "eslintPeerRange": "^8.57.0 || ^9.0.0 || ^10.0.0",
+    "ruleCount": 137
+  },
+  "unicorn": {
+    "version": "80.0.0",
+    "eslintPeerRange": ">=10.4",
+    "ruleCount": 399
+  },
+  "vitest": {
+    "version": "1.6.28",
+    "eslintPeerRange": ">=8.57.0",
+    "ruleCount": 82
+  }
+}

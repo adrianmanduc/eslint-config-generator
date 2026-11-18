@@ -1,0 +1,18 @@
+{
+  "packageName": "eslint-plugin-react-refresh",
+  "version": "0.5.8",
+  "rules": [
+    {"name":"only-export-components","description":"","url":"","type":"problem","fixable":false,"deprecated":false,"typed":false,"hasOptions":true}
+  ],
+  "configs": {
+    "recommended": {
+      "react-refresh/only-export-components": ["error",{}]
+    },
+    "vite": {
+      "react-refresh/only-export-components": ["error",{"allowConstantExport":true,"allowCompoundComponents":true}]
+    },
+    "next": {
+      "react-refresh/only-export-components": ["error",{"allowExportNames":["experimental_ppr","dynamic","dynamicParams","revalidate","fetchCache","runtime","preferredRegion","maxDuration","metadata","generateMetadata","viewport","generateViewport","generateImageMetadata","generateSitemaps","generateStaticParams","instant","contentType","size"]}]
+    }
+  }
+}

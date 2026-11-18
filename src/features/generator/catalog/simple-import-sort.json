@@ -1,0 +1,11 @@
+{
+  "packageName": "eslint-plugin-simple-import-sort",
+  "version": "14.0.0",
+  "rules": [
+    {"name":"exports","description":"Automatically sort exports.","url":"https://github.com/lydell/eslint-plugin-simple-import-sort#sort-order","type":"layout","fixable":true,"deprecated":false,"typed":false,"hasOptions":false},
+    {"name":"imports","description":"Automatically sort imports.","url":"https://github.com/lydell/eslint-plugin-simple-import-sort#sort-order","type":"layout","fixable":true,"deprecated":false,"typed":false,"hasOptions":true}
+  ],
+  "configs": {
+
+  }
+}

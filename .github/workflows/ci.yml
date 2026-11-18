@@ -1,0 +1,58 @@
+# Runs the repository's checks on every pull request and on pushes to main.
+# Use "CI / checks" as the required status check in the main branch ruleset.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Read-only token: the workflow only checks code, it never writes to the repo.
+permissions:
+  contents: read
+
+# A new push to the same PR cancels the run that is still going.
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      # Git hooks are for local commits only.
+      HUSKY: "0"
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      # Actions are pinned to commit SHAs so a moved tag cannot change what runs.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # Installs the pnpm version from "packageManager" in package.json.
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Lint styles
+        run: pnpm lint:styles
+
+      - name: Type-check
+        run: pnpm typecheck
+
+      # Includes loading every generated config in real ESLint and the
+      # catalog freshness check.
+      - name: Test
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build

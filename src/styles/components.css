@@ -1,0 +1,36 @@
+@layer components {
+  [data-slot="button"]:not(:disabled, [aria-disabled="true"]) {
+    cursor: pointer;
+  }
+
+  /* The part of the page the guided tour is currently describing. */
+  [data-tour-active] {
+    border-radius: var(--radius);
+    outline: 2px solid var(--brand);
+    outline-offset: 4px;
+  }
+
+  /*
+   * FAQ answers slide open where the browser can animate to an auto height;
+   * elsewhere they simply appear.
+   */
+  [data-slot="faq-item"] {
+    interpolate-size: allow-keywords;
+  }
+
+  [data-slot="faq-item"]::details-content {
+    block-size: 0;
+    overflow: clip;
+    transition: block-size 200ms ease, content-visibility 200ms allow-discrete;
+  }
+
+  [data-slot="faq-item"][open]::details-content {
+    block-size: auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-slot="faq-item"]::details-content {
+      transition: none;
+    }
+  }
+}

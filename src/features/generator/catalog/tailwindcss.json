@@ -1,0 +1,28 @@
+{
+  "packageName": "eslint-plugin-tailwindcss",
+  "version": "4.4.0",
+  "rules": [
+    {"name":"classnames-order","description":"Enforces a consistent order for the Tailwind CSS classnames, based on the compiler.","url":"https://github.com/francoismassart/eslint-plugin-tailwindcss/blob/alpha/v4-basic-files/docs/rules/classnames-order.md","type":"suggestion","fixable":true,"deprecated":false,"typed":false,"hasOptions":true},
+    {"name":"enforces-canonical-classname","description":"Enforces the canonical spelling of a classname, as resolved by the Tailwind CSS compiler.","url":"https://github.com/francoismassart/eslint-plugin-tailwindcss/blob/alpha/v4-basic-files/docs/rules/enforces-canonical-classname.md","type":"problem","fixable":true,"deprecated":false,"typed":false,"hasOptions":true},
+    {"name":"enforces-negative-arbitrary-values","description":"Warns about `-` prefixed classnames using arbitrary values.","url":"https://github.com/francoismassart/eslint-plugin-tailwindcss/blob/alpha/v4-basic-files/docs/rules/enforces-negative-arbitrary-values.md","type":"problem","fixable":true,"deprecated":false,"typed":false,"hasOptions":true},
+    {"name":"enforces-shorthand","description":"Avoid using multiple Tailwind CSS classnames when not required.","url":"https://github.com/francoismassart/eslint-plugin-tailwindcss/blob/alpha/v4-basic-files/docs/rules/enforces-shorthand.md","type":"suggestion","fixable":true,"deprecated":false,"typed":false,"hasOptions":true},
+    {"name":"important-modifier-suffix","description":"In v4 you should place the `!` at the very end of the class name.","url":"https://github.com/francoismassart/eslint-plugin-tailwindcss/blob/alpha/v4-basic-files/docs/rules/important-modifier-suffix.md","type":"problem","fixable":true,"deprecated":false,"typed":false,"hasOptions":true},
+    {"name":"no-arbitrary-value","description":"Forbid using arbitrary values in classnames.","url":"https://github.com/francoismassart/eslint-plugin-tailwindcss/blob/alpha/v4-basic-files/docs/rules/no-arbitrary-value.md","type":"problem","fixable":false,"deprecated":false,"typed":false,"hasOptions":true},
+    {"name":"no-contradicting-classname","description":"Avoid contradicting Tailwind CSS classnames.","url":"https://github.com/francoismassart/eslint-plugin-tailwindcss/blob/alpha/v4-basic-files/docs/rules/no-contradicting-classname.md","type":"problem","fixable":false,"deprecated":false,"typed":false,"hasOptions":true},
+    {"name":"no-custom-classname","description":"Detects classnames which do not belong to Tailwind CSS.","url":"https://github.com/francoismassart/eslint-plugin-tailwindcss/blob/alpha/v4-basic-files/docs/rules/no-custom-classname.md","type":"suggestion","fixable":false,"deprecated":false,"typed":false,"hasOptions":true},
+    {"name":"no-unnecessary-arbitrary-value","description":"Avoid unjustified arbitrary classnames.","url":"https://github.com/francoismassart/eslint-plugin-tailwindcss/blob/alpha/v4-basic-files/docs/rules/no-unnecessary-arbitrary-value.md","type":"problem","fixable":true,"deprecated":false,"typed":false,"hasOptions":true}
+  ],
+  "configs": {
+    "recommended": {
+      "tailwindcss/classnames-order": "warn",
+      "tailwindcss/enforces-canonical-classname": "warn",
+      "tailwindcss/enforces-negative-arbitrary-values": "warn",
+      "tailwindcss/enforces-shorthand": "warn",
+      "tailwindcss/important-modifier-suffix": "warn",
+      "tailwindcss/no-arbitrary-value": "off",
+      "tailwindcss/no-contradicting-classname": "error",
+      "tailwindcss/no-custom-classname": "warn",
+      "tailwindcss/no-unnecessary-arbitrary-value": "warn"
+    }
+  }
+}

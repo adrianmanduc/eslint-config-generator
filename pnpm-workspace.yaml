@@ -1,0 +1,9 @@
+# pnpm only runs dependency install scripts that are listed here.
+allowBuilds:
+  '@parcel/watcher': true
+  '@swc/core': true
+  esbuild: true
+  sharp: false
+  unrs-resolver: false
+minimumReleaseAgeExclude:
+  - '@agm-stack/eslint-config-next@0.1.0'

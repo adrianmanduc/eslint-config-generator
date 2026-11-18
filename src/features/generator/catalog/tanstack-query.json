@@ -1,0 +1,35 @@
+{
+  "packageName": "@tanstack/eslint-plugin-query",
+  "version": "5.107.1",
+  "rules": [
+    {"name":"exhaustive-deps","description":"Exhaustive deps rule for useQuery","url":"https://tanstack.com/query/latest/docs/eslint/exhaustive-deps","type":"problem","fixable":false,"deprecated":false,"typed":false,"hasOptions":true},
+    {"name":"infinite-query-property-order","description":"Ensure correct order of inference sensitive properties for infinite queries","url":"https://tanstack.com/query/latest/docs/eslint/infinite-query-property-order","type":"problem","fixable":true,"deprecated":false,"typed":false,"hasOptions":false},
+    {"name":"mutation-property-order","description":"Ensure correct order of inference-sensitive properties in useMutation()","url":"https://tanstack.com/query/latest/docs/eslint/mutation-property-order","type":"problem","fixable":true,"deprecated":false,"typed":false,"hasOptions":false},
+    {"name":"no-rest-destructuring","description":"Disallows rest destructuring in queries","url":"https://tanstack.com/query/latest/docs/eslint/no-rest-destructuring","type":"problem","fixable":false,"deprecated":false,"typed":false,"hasOptions":false},
+    {"name":"no-unstable-deps","description":"Disallow putting the result of query hooks directly in a React hook dependency array","url":"https://tanstack.com/query/latest/docs/eslint/no-unstable-deps","type":"problem","fixable":false,"deprecated":false,"typed":false,"hasOptions":false},
+    {"name":"no-void-query-fn","description":"Ensures queryFn returns a non-undefined value","url":"https://tanstack.com/query/latest/docs/eslint/no-void-query-fn","type":"problem","fixable":false,"deprecated":false,"typed":false,"hasOptions":false},
+    {"name":"prefer-query-options","description":"Prefer using queryOptions() to co-locate queryKey and queryFn","url":"https://tanstack.com/query/latest/docs/eslint/prefer-query-options","type":"problem","fixable":false,"deprecated":false,"typed":false,"hasOptions":false},
+    {"name":"stable-query-client","description":"Makes sure that QueryClient is stable","url":"https://tanstack.com/query/latest/docs/eslint/stable-query-client","type":"problem","fixable":true,"deprecated":false,"typed":false,"hasOptions":false}
+  ],
+  "configs": {
+    "recommended": {
+      "@tanstack/query/exhaustive-deps": "error",
+      "@tanstack/query/infinite-query-property-order": "error",
+      "@tanstack/query/mutation-property-order": "error",
+      "@tanstack/query/no-rest-destructuring": "warn",
+      "@tanstack/query/no-unstable-deps": "error",
+      "@tanstack/query/no-void-query-fn": "error",
+      "@tanstack/query/stable-query-client": "error"
+    },
+    "recommended-strict": {
+      "@tanstack/query/exhaustive-deps": "error",
+      "@tanstack/query/infinite-query-property-order": "error",
+      "@tanstack/query/mutation-property-order": "error",
+      "@tanstack/query/no-rest-destructuring": "warn",
+      "@tanstack/query/no-unstable-deps": "error",
+      "@tanstack/query/no-void-query-fn": "error",
+      "@tanstack/query/prefer-query-options": "error",
+      "@tanstack/query/stable-query-client": "error"
+    }
+  }
+}
