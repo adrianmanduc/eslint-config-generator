@@ -6,5 +6,5 @@ export const brand = {
     // Tagged so adrianmanduc.com's analytics can attribute visits to this site.
     url: "https://adrianmanduc.com/?utm_source=eslintconfig.dev&utm_medium=referral",
   },
-  repositoryUrl: "https://github.com/agm-stack/eslint-config-generator",
+  repositoryUrl: "https://github.com/adrianmanduc/eslint-config-generator",
 } as const;
